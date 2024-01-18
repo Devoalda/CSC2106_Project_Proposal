@@ -6,6 +6,9 @@
 \usepackage{multicol}
 \usepackage[bookmarks=true]{hyperref}
 
+\usepackage{graphicx}
+\graphicspath{{figures/}{./}}
+
 % \pdfinfo{
 %   /Author (Team 24)
 %   /Title  (EcoSense: Smart CO2 Monitoring for Sustainable Environments)
@@ -84,6 +87,15 @@ This project addresses the pressing need for an efficient and scalable CO\textsu
 \section{Project Specifications}
 
 \subsection{Project Architecture}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.44\textwidth]{project_architecture.png}
+    \caption{Architectural Overview of Solution}
+    \label{fig:project_architecture}
+\end{figure}
+
+A conceptual architecture of the proposed solution is presented in Figure \ref{fig:project_architecture}. In an ideal heterogeneous scenario, the leaf nodes remain device-agnostic, transmitting serialized data in a standardized format to the parent node. The parent node, acting as a load balancer, consolidates the data for transmission to the central server. The central server is tasked with handling computationally intensive processes such as data preprocessing, mining, and visualization. Due to time and material constraints, our initial focus will be on developing a single set of root-leaf nodes with one set of devices—a proof of concept to validate the proposed system.
 
 \subsection{Project Materials}
 
